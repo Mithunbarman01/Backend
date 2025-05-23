@@ -18,6 +18,7 @@ const uploadOnCloudinary = async (localFilePath) => {
     });
     //file has been uploaded successfully
     console.log("file is uploaded on cloudinary", response.url)
+    return response;
   }
   catch (error) {
     // Remove the local file if it exists
@@ -25,3 +26,5 @@ const uploadOnCloudinary = async (localFilePath) => {
     return null;
   }
 }
+
+export { uploadOnCloudinary }
